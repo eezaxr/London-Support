@@ -34,7 +34,7 @@ class ModmailBot(commands.Bot):
         self.special_user_id = 790869950076157983
         
         # Channel ID for whitelist auto-response
-        self.whitelist_channel_id = 1400532622161215598
+        self.whitelist_channel_id = 1384510906897137745
         
     async def setup_hook(self):
         """Load all command cogs and set status"""
@@ -116,7 +116,7 @@ class ModmailBot(commands.Bot):
         # Handle specific channel auto-response
         if message.channel.id == self.whitelist_channel_id and not message.author.bot:
             try:
-                await message.channel.send("To become Whitelisted, please apply here: <#1384509015962288210>, if you need support, please DM the support bot.")
+                await message.channel.send("To become Whitelisted, please apply here: <#1384509015962288210>, if you need support, please DM the support bot. Please speak in <#1384510906897137745>")
                 print(f"✅ Sent whitelist message for user {message.author} in channel {message.channel.name}")
             except Exception as e:
                 print(f"❌ Failed to send whitelist message: {e}")
